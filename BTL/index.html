@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>TTCM</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav1" id="topnav">
+            <a id="logo" href="#"><img width="70px" height="58px" src="assets/images/logo.svg" alt="360 Boutique"></a>
+            <a href="#"><img width="20px" height="24px" src="assets/images/add.svg" alt="Tài khoản"></a>
+            <a href="#"><img width="20px" height="24px" src="assets/images/cart.svg" alt="Giỏ hàng"></a>
+            <div class="phonenum">
+                <img src="assets/images/headphone.svg" alt="" class="phone">
+                <span>TƯ VẤN MUA HÀNG: 09123456789</span>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid" id="nav2">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">VỀ CHÚNG TÔI</a></li>
+                    <li><a href="#">HÀNG MỚI VỀ</a></li>
+                    <li><a href="#">SP XUÂN HÈ</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">BỘ SƯU TẬP
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">SPIRIT SQUARD</a></li>
+                            <li><a href="#">SPIRIT VIBES</a></li>
+                            <li><a href="#">MULTIFACETED PLAYER</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">TIN TỨC
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">TIN TỨC THỜI TRANG</a></li>
+                            <li><a href="#">360 BLOG</a></li>
+                            <li><a href="#">360 TUYỂN DỤNG</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">KHUYẾN MẠI
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Sale 20%</a></li>
+                            <li><a href="#">Sale 165K</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="form_search">
+                    <div class="col-xs-2 input-group">
+                        <input type="search" class="form-control" id="search-input" placeholder="Tìm kiếm">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="assets/images/banner/4-Anh-slide-web-Copy-1536x557.jpg" alt="">
+                </div>
+
+                <div class="item">
+                    <img src="assets/images/banner/Banner-1536x558.jpg" alt="">
+                </div>
+
+                <div class="item">
+                    <img src="assets/images/banner/Banner-web-1350x490-1-1536x558.jpg" alt="">
+                </div>
+
+                <div class="item">
+                    <img src="assets/images/banner/Banner-web-1350x490-1.png" alt="">
+                </div>
+
+                <div class="item">
+                    <img src="assets/images/banner/Banner-web-1350x490-a-1536x558.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div id="searched-products" class="container-fluid">
+            <h3>DANH SÁCH TÌM KIẾM</h3>
+            <input type='hidden' id='current_page2' />
+            <input type='hidden' id='show_per_page2' />
+            <div class="searched-products row"> 
+            </div>
+            <p class="search-note">Không có sản phẩm bạn tìm kiếm!</p>
+        </div>
+        <div id="page_navigation2"></div>
+
+        <div class="category">
+            <h3>DANH MỤC SẢN PHẨM</h3>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <a href="#">
+                        <div class="loai-category col-xs-3 col-sm-3 col-lg-3">
+                            <span>Áo phông</span>
+                            <img src="assets/images/category/Tach-nen-APHTK422-Copy-1.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="loai-category col-xs-3 col-sm-3 col-lg-3">
+                            <span>Áo polo</span>
+                            <img src="assets/images/category/Aso-polo.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="loai-category col-xs-3 col-sm-3 col-lg-3">
+                            <span>Áo sơ mi</span>
+                            <img src="assets/images/category/anh6-1536x1536.webp" alt="">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="loai-category col-xs-3 col-sm-3 col-lg-3">
+                            <span>Blazer</span>
+                            <img src="assets/images/category/anh4.webp" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="row justify-content-center">
+                    <a href="#">
+                        <div class="loai-category col-xs-3 col-sm-3 col-lg-3">
+                            <span>Quần Joger</span>
+                            <img src="assets/images/category/anh8-1536x1536.webp" alt="">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="loai-category col-xs-3 col-sm-3 col-lg-3">
+                            <span>Quần short</span>
+                            <img src="assets/images/category/Quan-short.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="loai-category col-xs-3 col-sm-3 col-lg-3">
+                            <span>Quần Jeans</span>
+                            <img src="assets/images/category/anh7-1536x1536.webp" alt="">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="loai-category col-xs-3 col-sm-3 col-lg-3">
+                            <span>Quần âu</span>
+                            <img src="assets/images/category/Quan-au.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="fill-products" class="container-fluid">
+            <h3>DANH SÁCH LỌC</h3>
+            <input type='hidden' id='current_page3' />
+            <input type='hidden' id='show_per_page3' />
+            <div class="fill-products row"></div>
+        </div>
+        <div id="page_navigation3"></div>
+        <div class="popular">
+            <h3>SẢN PHẨM NHIỀU NGƯỜI MUA</h3>
+            <div class="container-fluid" id="pop1">
+                <div class="row">
+                    <input type='hidden' id='current_page' />
+                    <input type='hidden' id='show_per_page' />
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+
+                                <a href="#"><img src="assets/images/product/APTTK435-QSNTK404-2-Copy-scaled.jpg"
+                                        class="mainImg" alt=""></a>
+                                <a href="#"><img src="assets/images/product/APTTK435-QSKTK412-2-Copy-scaled.jpg"
+                                        class="hoverImg" alt=""></a>
+                                <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Áo phông APTTK435</a><br>
+                            <p href="" class="price">399.000đ</p>
+                            <a href="" class="dis-price">299.000đ</a>
+                            <div class="fillter">Áo phông</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#"><img src="assets/images/product/STDTK407-QATTK401-1-Copy-scaled.jpg"
+                                        class="mainImg" alt=""></a>
+                                <a href="#"><img src="assets/images/product/STDTK407-QATTK401-15-Copy-scaled.jpg"
+                                        class="hoverImg" alt=""></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Áo sơ mi STDTK407</a><br>
+                            <p href="" class="price">369.000đ</p>
+                            <a href="" class="dis-price">269.000đ</a>
+                            <div class="fillter">Áo sơ mi</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href=""><img src="assets/images/product/POTTK411-QATTK401-14-Copy-scaled.jpg"
+                                        class="mainImg" alt=""></a>
+                                <a href="#"><img src="assets/images/product/POTTK411-QATTK401-8-Copy-scaled.jpg"
+                                        class="hoverImg" alt=""></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Áo polo POTTK411</a><br>
+                            <p href="" class="price">459.000đ</p>
+                            <a href="" class="dis-price">310.000đ</a>
+                            <div class="fillter">Áo polo</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#"><img src="assets/images/product/POHTK420-QJDTK407-3-Copy.jpg" alt=""
+                                        class="mainImg"></a>
+                                <a href="#"><img src="assets/images/product/POHTK420-QACTK320-3-Copy.jpg"
+                                        class="hoverImg" alt=""></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Áo polo POHTK420</a><br>
+                            <p href="#" class="price">459.000đ</p>
+                            <a href="#" class="dis-price">330.000 VND</a>
+                            <div class="fillter">Áo polo</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href=""><img src="assets/images/product/QSKTK412-4-Copy-scaled.jpg" alt=""
+                                        class="mainImg"></a>
+                                <a href="#"><img src="assets/images/product/QSKTK412-1-Copy-scaled.jpg" alt=""
+                                        class="hoverImg"></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Quần short QSKTK412</a><br>
+                            <p href="" class="price">250.000đ</p>
+                            <a href="" class="dis-price">159.000đ</a>
+                            <div class="fillter">Quần short</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href=""><img src="assets/images/product/STDTK412-QATTK401-7-Copy-scaled.jpg" alt=""
+                                        class="mainImg"></a>
+                                <a href="#"><img src="assets/images/product/STDTK412-QATTK401-8-Copy-scaled.jpg" alt=""
+                                        class="hoverImg"></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Áo sơ mi STDTK412</a><br>
+                            <p href="" class="price">399.000đ</p>
+                            <a href="" class="dis-price">299.000đ</a>
+                            <div class="fillter">Áo sơ mi</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#" class="img-container"><img
+                                        src="assets/images/product/ABZTK202-QNTTK201-1.jpg" alt="" class="mainImg"
+                                        style="width: 219px;height: 274px;"></a>
+                                <a href="#"><img src="assets/images/product/ABZTK202-QNTTK201-6.jpg" alt=""
+                                        class="hoverImg" style="width: 219px;height: 274px;"></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Áo Blazer ABZTK202</a><br>
+                            <p href="" class="price">399.000đ</p>
+                            <a href="" class="dis-price">299.000đ</a>
+                            <div class="fillter">Blazer</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#"><img src="assets/images/product/ABZTK203-1.jpg" alt="" class="mainImg"
+                                        style="width: 219px;height: 274px;"></a>
+                                <a href="#"><img src="assets/images/product/ABZTK203-15-510x765.jpg" alt=""
+                                        class="hoverImg" style="width: 219px;height: 274px;"></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Áo Blazer ABZTK203</a><br>
+                            <p href="" class="price">399.000đ</p>
+                            <a href="" class="dis-price">299.000đ</a>
+                            <div class="fillter">Blazer</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#"><img src="assets/images/product/QATTK401-7-Copy-scaled.jpg"
+                                        class="mainImg" alt=""></a>
+                                <a href="#"><img src="assets/images/product/QATTK401-8-Copy-510x638.jpg"
+                                        class="hoverImg" alt=""></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Quần âu QATTK401</a><br>
+                            <p href="" class="price">419.000đ</p>
+                            <a href="" class="dis-price">299.000đ</a>
+                            <div class="fillter">Quần âu</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#"><img src="assets/images/product/QGKTK305-1-1.jpg" alt=""
+                                        class="mainImg"></a>
+                                <a href="#"><img src="assets/images/product/QGKTK305-4-1.jpg" alt=""
+                                        class="hoverImg"></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Quần Joger QGKTK305</a><br>
+                            <p href="" class="price">399.000đ</p>
+                            <a href="" class="dis-price">299.000đ</a>
+                            <div class="fillter">Quần Joger</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#"><img src="assets/images/product/QSGTK405-4-Copy.jpg" alt=""
+                                        class="mainImg"></a>
+                                <a href="#"><img src="assets/images/product/QSGTK405-16-Copy.jpg" alt=""
+                                        class="hoverImg"></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Quần short QSGTK405</a><br>
+                            <p href="" class="price">399.000đ</p>
+                            <a href="" class="dis-price">299.000đ</a>
+                            <div class="fillter">Quần short</div>
+                            <div class="action">
+                                <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                                <span>|</span>
+                                <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#"><img src="assets/images/product/QSGTK412-2-Copy.jpg" alt=""
+                                        class="mainImg"></a>
+                                <a href="#"><img src="assets/images/product/QSGTK412-8-Copy.jpg" alt=""
+                                        class="hoverImg"></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Quần short QSGTK412</a><br>
+                            <p href="" class="price">399.000đ</p>
+                            <a href="" class="dis-price">299.000đ</a>
+                            <div class="fillter">Quần short</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#"><img src="assets/images/product/QSGTK418-2-Copy-scaled.jpg" alt=""
+                                        class="mainImg"></a>
+                                <a href="#"><img src="assets/images/product/QSGTK412-8-Copy.jpg" alt=""
+                                        class="hoverImg"></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Quần short QSGTK418</a><br>
+                            <p href="" class="price">399.000đ</p>
+                            <a href="" class="dis-price">299.000đ</a>
+                            <div class="fillter">Quần short</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#"><img src="assets/images/product/QJDTK334-2-Copy-scaled.jpg" alt=""
+                                        class="mainImg"></a>
+                                <a href="#"><img src="assets/images/product/QJDTK334-3-Copy-scaled.jpg" alt=""
+                                        class="hoverImg"></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Quần Jean QJDTK334</a><br>
+                            <p href="" class="price">399.000đ</p>
+                            <a href="" class="dis-price">299.000đ</a>
+                            <div class="fillter">Quần Jeans</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#"><img src="assets/images/product/QJDTK335-2-Copy-scaled.jpg" alt=""
+                                        class="mainImg"></a>
+                                <a href="#"><img src="assets/images/product/QJDTK335-3-Copy-scaled.jpg" alt=""
+                                        class="hoverImg"></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Quần Jean QJDTK335</a><br>
+                            <p href="" class="price">399.000đ</p>
+                            <a href="" class="dis-price">299.000đ</a>
+                            <div class="fillter">Quần Jeans</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#"><img src="assets/images/product/QJDTK401-1-Copy.jpg" alt=""
+                                        class="mainImg"></a>
+                                <a href="#"><img src="assets/images/product/QJDTK401-2-Copy.jpg" alt=""
+                                        class="hoverImg"></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Quần Jean QJDTK401</a><br>
+                            <p href="" class="price">399.000đ</p>
+                            <a href="" class="dis-price">299.000đ</a>
+                            <div class="fillter">Quần Jeans</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#"><img src="assets/images/product/APHTK416-QSKTK412-12-Copy.jpg" alt=""
+                                        class="mainImg"></a>
+                                <a href="#"><img src="assets/images/product/APHTK416-QSKTK412-2-Copy-1.jpg" alt=""
+                                        class="hoverImg"></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Áo phông 4S23APHTK416</a><br>
+                            <p href="" class="price">359.000đ</p>
+                            <a href="" class="dis-price">289.000đ</a>
+                            <div class="fillter">Áo phông</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#"><img src="assets/images/product/QGGTK311-1.jpg" alt=""
+                                        class="mainImg"></a>
+                                <a href="#"><img src="assets/images/product/QGGTK311-11-510x637.jpg" alt=""
+                                        class="hoverImg"></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Quần Joger QGGTK311</a><br>
+                            <p href="" class="price">399.000đ</p>
+                            <a href="" class="dis-price">320.000đ</a>
+                            <div class="fillter">Quần Joger</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#"><img src="assets/images/product/QSNTK401-1-2.jpg" alt=""
+                                        class="mainImg"></a>
+                                <a href="#"><img src="assets/images/product/QSNTK401-7-2.jpg" alt=""
+                                        class="hoverImg"></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Quần short QSNTK401</a><br>
+                            <p href="" class="price">259.000đ</p>
+                            <a href="" class="dis-price">179.000đ</a>
+                            <div class="fillter">Quần short</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="product col-xs-4 col-sm-3 col-lg">
+                        <div class="detail">
+                            <div class="imageBox">
+                                <a href="#"><img src="assets/images/product/QSKTK202-1.jpg" alt="" class="mainImg" style="width: 219px;height: 274px;"></a>
+                                <a href="#"><img src="assets/images/product/QSKTK202-6-510x764.jpg" alt="" class="hoverImg" style="width: 219px;height: 274px;"></a>
+                                        <span><img src="assets/images/xArtboard_1.png" alt=""></span>
+                            </div>
+                            <a href="#" class="product-name">Quần short QSKTK202</a><br>
+                            <p href="" class="price">259.000đ</p>
+                            <a href="" class="dis-price">199.000đ</a>
+                            <div class="fillter">Quần short</div>
+                        </div>
+                        <div class="action">
+                            <a href="" class="buynow"><i class="bi bi-cart2"></i>Mua ngay</a>
+                            <span>|</span>
+                            <a href="" class="seedetail"><i class="bi bi-eye"></i>Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='page_navigation'></div>
+        </div>
+        <div class="bst">
+            <h3>BỘ SƯU TẬP</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="bst1">
+                        <img src="/assets/images/banner/Banner-web-1350x490-1.png" alt="" class="img-thumbnail image">
+                        <div class="seemorebtn">
+                            <a href="#" class="text">Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="bst2">
+                        <img src="/assets/images/banner/Banner-1536x558.jpg" alt="" class="img-thumbnail image">
+                        <div class="seemorebtn">
+                            <a href="#" class="text">Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Flickity HTML init -->
+        <div class="container-fluid feedback">
+            <h3>KHÁCH HÀNG CHIA SẺ</h3>
+            <div class="carousel"
+                data-flickity='{ "pageDots": false, "contain": true, "draggable": true, "wrapAround": true }'>
+                <div class="carousel-cell"><img
+                        src="assets/images/feedback/201489301_2015628395267360_5558241945173118755_n.jpg" alt=""></div>
+                <div class="carousel-cell"><img
+                        src="assets/images/feedback/201814743_2015628445267355_4859480102945425269_n.jpg" alt=""></div>
+                <div class="carousel-cell"><img
+                        src="assets/images/feedback/271599030_2177187265778138_6078011248327239459_n.jpg" alt=""></div>
+                <div class="carousel-cell"><img
+                        src="assets/images/feedback/271605058_2178923795604485_589843875991210061_n.jpg" alt=""></div>
+                <div class="carousel-cell"><img
+                        src="assets/images/feedback/271669354_2177187302444801_7479715780754811749_n.jpg" alt=""></div>
+                <div class="carousel-cell"><img
+                        src="assets/images/feedback/277297371_2235911659905698_7663677403486146446_n.jpg" alt=""></div>
+                <div class="carousel-cell"><img
+                        src="assets/images/feedback/277297950_2235911416572389_1706085882427843602_n.jpg" alt=""></div>
+                <div class="carousel-cell"><img
+                        src="assets/images/feedback/277300625_2235911376572393_625277129270151727_n.jpg" alt=""></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4 col-sm-2 col-lg-2">
+                    <h3>Về thương hiệu</h3>
+                    <a href="#">Giới thiệu 360</a> <br>
+                    <a href="#">Hệ thống cửa hàng</a> <br>
+                    <a href="#">Khuyến mại</a> <br>
+                    <a href="#">Bộ sưu tập</a>
+                </div>
+                <div class="col-xs-4 col-sm-3 col-lg-3">
+                    <h3>Hỗ trợ khách hàng</h3>
+                    <a href="#">Chính sách bảo mật thông tin</a> <br>
+                    <a href="#">Hướng dẫn đổi trả</a> <br>
+                    <a href="#">Hướng dẫn đặt hàng</a> <br>
+                    <a href="#">Chính sách vận chuyển</a>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-lg-2">
+                    <h3>Dịch vụ khách hàng</h3>
+                    <a href="#">Liên hệ chúng tôi</a>
+                </div>
+                <div class="col-xs-4 col-sm-5 col-lg-5">
+                    <h3>Kết nối với 360 để cập nhật những thông tin mới nhất</h3>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-tiktok"></i>
+                    <i class="bi bi-youtube"></i>
+                    <h3>Đăng ký nhận tin từ 360</h3>
+                    <!-- <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Nhập email của bạn" aria-label="Your email address" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" type="button">Đăng ký</button>
+                        </div>
+                      </div> -->
+                    <form action="#">
+                        <input type="search" id="gsearch" name="gsearch" placeholder="Nhập địa chỉ email của bạn">
+                        <input type="submit" value="Đăng ký">
+                    </form>
+                    <h3>Phương thức thanh toán</h3>
+                    <img src="assets/images/payment/pay.svg" alt="">
+                    <img src="assets/images/payment/bct.svg" alt="">
+                    <div class="row">
+
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-lg-6 contact">
+                    <h3>Công ty Cổ phần Thời trang 360</h3>
+                    <p>VPGD: 60/850 Đường Láng, Láng Thượng, Đống Đa, Hà Nội</p>
+                    <p>Trụ sở KD: Đội 6, Xã Phương Đình, Huyện Đan Phượng, Thành phố Hà nội, Việt Nam</p>
+                    <p>Hotline: 0986984483</p>
+                    <p>Email: 360boutique.vn@gmail.com</p>
+                    <p>GPKD: 0107756568</p>
+                </div>
+            </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
